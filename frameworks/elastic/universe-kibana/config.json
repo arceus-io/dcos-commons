@@ -26,11 +26,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "xpack_enabled": {
-          "description": "Whether or not to enable the commercial X-Pack plugin from kibana",
-          "type": "boolean",
-          "default": false
-        },
         "elasticsearch_url": {
           "description": "The URL of the Elasticsearch cluster to use for all your queries.",
           "type": "string",
@@ -60,6 +55,11 @@
           "description": "Kibana mem requirements",
           "type": "integer",
           "default": 2048
+        },
+        "xpack_enabled": {
+          "description": "[DEPRECATED: X-Pack is enabled by default on Kibana 6.3+. Changing this setting now has no effect]",
+          "type": "boolean",
+          "default": true
         }
       },
       "required": [
